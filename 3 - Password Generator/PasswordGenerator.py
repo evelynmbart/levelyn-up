@@ -25,22 +25,17 @@ def generate_password(min_length, numbers=True, special_characters=True):
 
 # Generate new character if it doesn't meet criteria and is too short
 
-    while not meets_criteria or len(pwd) < min_length:
+    while not meets_criteria:
         new_char = random.choice(characters) # randomly picks a character from the characters variable
         pwd += new_char
-
-# Determine if a number
 
         if new_char in digits:
             has_number = True
         elif new_char in special:
             has_special = True
 
-        meets_criteria = True
-        if numbers:
-            meets_criteria = has_number # if numbers included, meets_criteria will be set to True
-        if special_characters:
-            meets_criteria = meets_criteria and has_special # if special included, meets_criteria is set to True
+        # Calculate if pwd meets criteria and store in meets_criteria
+        meets_criteria = (len(pwd) >= min_length) and (numbers and has_number) and (special_characters and has_special)
 
     return pwd
 
