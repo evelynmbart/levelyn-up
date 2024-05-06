@@ -25,7 +25,7 @@ while True:
         userGuess = int(userGuess)
     else:
         print("Invalid input, please provide a number. ")
-        continue # loops us back to the beginning of the while loop
+        continue 
     
     if userGuess > randomNumber:
         print("You're too hot, try a guessing a smaller number!")
