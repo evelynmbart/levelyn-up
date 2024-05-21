@@ -9,9 +9,9 @@ function check() {
     const reverse = reverseString(value);
 
     if (value == reverse) {
-        alert("P A L I N D R O M E !")
+        alert("P A L I N D R O M E !");
     } else {
-        alert("N O P E !")
+        alert("N O P E !");
     }
     input.value = "";
 }
