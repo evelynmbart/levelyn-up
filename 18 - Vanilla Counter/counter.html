@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="container">
+        <h2 id="title">Counter:</h2>
+        <h2 id="counter">0</h2>
+    </div>
+    <div id="buttons">
+        <button class="btn" id="decrease"> - Decrease</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="increase"> + Increase</button>
+    </div>
+
+</body>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("container");
+        const headings = container.querySelectorAll("h2");
+        headings.forEach(function (heading) {
+            heading.style.display = "inline-block";
+            heading.style.margin = "0";
+            heading.style.padding = "10px";
+        });
+    });
+
+
+    document.querySelector("button").style.backgroundColor = "turquoise";
+    document.querySelector("button").style.borderRadius = "10px";
+    document.querySelector("button").style.borderStyle = "solid";
+    document.getElementById("counter").style.color = "teal";
+    document.getElementById("title").style.color = "teal";
+    document.querySelector("html").style.backgroundColor = "orange";
+
+
+
+
+    let counterValue = 0;
+    // create a counter variable
+    // let counter = 0;
+    // add button functionality
+
+    function updateCounterDisplay() {
+        document.getElementById("counter").innerText = counterValue;
+    }
+    const decButton = document.getElementById("decrease");
+    decButton.addEventListener("click", () => {
+        counterValue--;
+        updateCounterDisplay();
+    });
+
+    const resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", () => {
+        counterValue = 0;
+        updateCounterDisplay();
+    });
+
+    const incButton = document.getElementById("increase");
+    incButton.addEventListener("click", () => {
+        counterValue++;
+        updateCounterDisplay();
+    })
+</script>
+
+</html>
