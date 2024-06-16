@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Magic Eight Ball</title>
+</head>
+
+<body>
+    <img id="icon" src="ball copy.png" alt="Eight ball" width="100" height="100" />
+    <p>Psst... Click the ball above for some wisdom!</p>
+    <button id="lifestyleBtn">Lifestyle Advice</button>
+    <button id="relationshipBtn">Relationship Advice</button>
+    <p id="displayArea"></p>
+    <script>
+
+        //6-17 add functionality to the lifestyle and relationship advice buttons to switch between arrays.
+
+        // create an array of quotes.
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const quotes = [
+                "When the going gets rough - turn to wonder.",
+                "If you have knowledge, let others light their candles in it.",
+                "A bird doesn't sing because it has an answer, it sings because it has a song.",
+                "We are not what we know but what we are willing to learn.",
+                "Good people are good because they've come to wisdom through failure.",
+                "The reason people find it so hard to be happy is that they always see the past better than it was, the present worse than it is, and the future less resolved than it will be."
+            ]
+
+            function getRandomColor() {
+                const r = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+
+            function randomFontSize() {
+                let size = Math.floor(Math.random() * 55) + "px";
+                return size;
+            }
+
+            let currentIndex = 0;
+
+            const eightBallClick = document.getElementById("icon");
+
+            eightBallClick.addEventListener("click", () => {
+                displayArea.textContent = quotes[currentIndex];
+                currentIndex = (currentIndex + 1) % quotes.length;
+                displayArea.style.color = getRandomColor();
+                displayArea.style.fontSize = randomFontSize();
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
