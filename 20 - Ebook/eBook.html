@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book</title>
+    <link rel="stylesheet" href="eBook.css">
+</head>
+
+<body>
+    <h1>Benny the Bunny's Wild Adventures</h1>
+    <div id="container">
+        <div id="imageContent">
+            <img id="images" src="eBook Images/">
+        </div>
+        <p id="pageContent"></p>
+    </div>
+    <div id="buttons">
+        <button id="prev-page" onclick="prev()">Previous Page</button>
+        <button id="next-page" onclick="next()">Next Page</button>
+    </div>
+
+    <script>
+
+        const storyText = [
+            "Benny the bunny, so small and so spry, dreamed of adventures, reaching the sky.",
+            "He packed up his backpack, so sturdy and tight, set off on a journey, from morning to night.",
+            "Through meadows he hopped, where flowers did bloom, with colors so vivid, they’d light up the gloom.",
+            "He crossed a small stream, with a leap and a bound, and met a wise turtle, so old and so round.",
+            "The turtle said, “Benny, be brave and be kind, and many great treasures you surely will find.",
+            "Through forests so dense, where shadows did play, Benny found courage to not lose his way.",
+            "Up mountains so high, where eagles did soar, he climbed and he climbed, till he couldn’t no more.",
+            "At the peak, Benny gazed at the view far and wide, and felt a warm glow, of achievement inside.",
+            "He danced in delight, in the soft twilight, his dreams had come true, what a wonderful sight.",
+            "Back home he returned, with tales of his quest, Benny the Brave, who had done his very best."
+        ]
+
+        const storyImages = [
+            "imageOne.jpg",
+            "imageTwo.jpg",
+            "imageThree.jpg",
+            "imageFour.jpg",
+            "imageFive.jpg",
+            "imageSix.jpg",
+            "imageSeven.jpg",
+            "imageEight.jpg",
+            "imageNine.jpg",
+            "imageTen.jpg"
+        ];
+
+        //let currentImage = 0;
+        let currentPage = 0;
+
+        function updateDisplayArea() {
+            document.getElementById("pageContent").innerHTML = storyText[currentPage];
+            document.getElementById("images").src = `eBook Images/${storyImages[currentPage]}`;
+        };
+
+        function next() {
+            console.log("next page clicked!")
+            if (currentPage == 9) {
+                currentPage = 8;
+                alert("There are no pages after this!");
+            }
+            currentPage++;
+            updateDisplayArea();
+        }
+
+        function prev() {
+            console.log("prev page clicked!")
+            if (currentPage == 0) {
+                currentPage = 1;
+                alert("There are no pages before this!")
+            }
+            currentPage--;
+            updateDisplayArea();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateDisplayArea();
+        })
+
+
+        // currentPage is set to 0
+        // when next page is clicked,
+        // set currentPage ++ (increase by one)
+        // when previous page is clicked,
+        // set currentPage -- (decrease by one)
+
+        // if currentPage = 0 && previous page is clicked
+        // alert ("This is the first page of the book!")
+        // if currentPage = 11 (the index of page 10) && next page is clicked,
+        // alert ("This is the last page of the book!")
+
+    </script>
+</body>

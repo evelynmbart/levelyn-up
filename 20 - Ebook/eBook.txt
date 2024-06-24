@@ -1,0 +1,200 @@
+Title: The Adventures of Benny the Brave
+
+Page 1
+
+Couplet:
+Benny the bunny, so small and so spry,
+Dreamed of adventures, reaching the sky.
+
+Picture:
+A small, fluffy bunny named Benny is sitting on a grassy hilltop under a bright blue sky with a few fluffy white clouds. Benny is looking up at the sky with a dreamy expression.
+
+Page 2
+
+Couplet:
+He packed up his backpack, so sturdy and tight,
+Set off on a journey, from morning to night.
+
+Picture:
+Benny is standing next to a tiny, colorful backpack. The backpack is filled with little travel essentials sticking out (like a map, a carrot, and a flashlight). Benny is adjusting the straps and looking determined.
+
+Page 3
+
+Couplet:
+Through meadows he hopped, where flowers did bloom,
+With colors so vivid, they’d light up the gloom.
+
+Picture:
+Benny is hopping through a beautiful meadow full of vibrant, colorful flowers. Butterflies are fluttering around, and the sun is shining brightly.
+
+Page 4
+
+Couplet:
+He crossed a small stream, with a leap and a bound,
+And met a wise turtle, so old and so round.
+
+Picture:
+Benny is mid-jump over a sparkling, clear stream. On the other side, a wise old turtle with a kind smile is waiting. The turtle has a small walking stick and glasses perched on its nose.
+
+Page 5
+
+Couplet:
+The turtle said, “Benny, be brave and be kind,
+And many great treasures you surely will find.”
+
+Picture:
+Benny and the turtle are sitting together on a log. The turtle is speaking while pointing to a distant mountain. Benny is listening attentively, with wide, curious eyes.
+
+Page 6
+
+Couplet:
+Through forests so dense, where shadows did play,
+Benny found courage to not lose his way.
+
+Picture:
+Benny is walking through a dense forest with tall, ancient trees. Sunlight filters through the leaves, creating playful shadows on the forest floor. Benny looks brave but cautious.
+
+Page 7
+
+Couplet:
+Up mountains so high, where eagles did soar,
+He climbed and he climbed, till he couldn’t no more.
+
+Picture:
+Benny is climbing a steep, rocky mountain. Above him, an eagle is soaring in the sky. Benny is almost at the top, looking both tired and determined.
+
+Page 8
+
+Couplet:
+At the peak, Benny gazed at the view far and wide,
+And felt a warm glow, of achievement inside.
+
+Picture:
+Benny is standing at the top of the mountain, looking out over a breathtaking landscape of rolling hills, forests, and rivers. The sun is setting, casting a golden glow over everything.
+
+Page 9
+
+Couplet:
+He danced in delight, in the soft twilight,
+His dreams had come true, what a wonderful sight.
+
+Picture:
+Benny is dancing joyfully on the mountain peak as the sky turns a soft twilight purple and pink. Stars are beginning to appear, and Benny looks incredibly happy and free.
+
+Page 10
+
+Couplet:
+Back home he returned, with tales of his quest,
+Benny the Brave, who had done his very best.
+
+Picture:
+Benny is back at his cozy burrow, surrounded by friends and family. He’s animatedly telling his story, with everyone listening intently. Benny looks proud and content.
+
+The End
+
+
+
+
+
+
+//<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book</title>
+    <link rel="stylesheet" href="eBook.css">
+
+<body id="body">
+    <h1 id="title">Benny the Bunny's Wild Adventure</h1>
+    <div id="container">
+        <div id="leftBox">
+            <div id="imageContent"></div>
+        </div>
+        <div id="rightBox">
+            <div id="textContent"></div>
+        </div>
+    </div>
+    <div id="buttons">
+        <button id="previous-btn">Previous Page</button>
+        <button id="next-btn">Next Page</button>
+    </div>
+
+    <script>
+
+        // create a storyText array
+
+        // create an images array
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const storyText = [
+                "Benny the bunny, so small and so spry, dreamed of adventures, reaching the sky.",
+                "He packed up his backpack, so sturdy and tight, set off on a journey, from morning to night.",
+                "Through meadows he hopped, where flowers did bloom, with colors so vivid, they’d light up the gloom.",
+                "He crossed a small stream, with a leap and a bound, and met a wise turtle, so old and so round.",
+                "The turtle said, “Benny, be brave and be kind, and many great treasures you surely will find.",
+                "Through forests so dense, where shadows did play, Benny found courage to not lose his way.",
+                "Up mountains so high, where eagles did soar, he climbed and he climbed, till he couldn’t no more.",
+                "At the peak, Benny gazed at the view far and wide, and felt a warm glow, of achievement inside.",
+                "He danced in delight, in the soft twilight, his dreams had come true, what a wonderful sight.",
+                "Back home he returned, with tales of his quest, Benny the Brave, who had done his very best."
+            ]
+
+            //let currentImage = 0;
+            let currentPage = 0;
+
+            function updateDisplayArea(index) {
+                document.getElementById("textContent").innerHTML = `<p>${storyText[index]}</p>`;
+                //document.getElementById("imageContent").innerHTML =
+                //`<img src="${imageContent[index]}" alt=" Image for page ${index + 1}" />`;
+            }
+
+            function nextPage() {
+                const nextButton = document.getElementById("next-btn");
+                nextButton.addEventListener("click", () => {
+                    if (currentPage = 11) {
+                        alert("There are no pages after this!");
+                    }
+                    currentPage++;
+                    updateDisplayArea();
+
+                })
+            }
+
+            function previousPage() {
+                const previousButton = document.getElementById("previous-btn");
+                previousButton.addEventListener("click", () => {
+                    if (currentPage = 0) {
+                        alert("There are no pages before this!")
+                    }
+                    currentPage--;
+                    updateDisplayArea();
+
+                })
+            }
+            updateDisplayArea();
+        }
+
+        );
+
+
+        // currentPage is set to 0
+        // when next page is clicked,
+        // set currentPage ++ (increase by one)
+        // when previous page is clicked,
+        // set currentPage -- (decrease by one)
+
+        // if currentPage = 0 && previous page is clicked
+        // alert ("This is the first page of the book!")
+        // if currentPage = 11 (the index of page 10) && next page is clicked,
+        // alert ("This is the last page of the book!")
+
+
+    </script>
+</body>
+</head>
+
+</html>
