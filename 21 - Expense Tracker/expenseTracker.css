@@ -1,0 +1,58 @@
+html {
+  background: linear-gradient(#b9f5d8, #d9fff5, #aad2ba, #6b8f71, #1d1e18);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding-left: 50px;
+  margin-bottom: 60px;
+}
+
+#addExpense {
+  float: left;
+}
+
+:placeholder-shown {
+  color: slategrey;
+}
+
+#newExpenseData {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 3px;
+  font-size: 11px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: lavenderblush;
+}
+#content {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#expenses {
+  padding-bottom: 15px;
+}
+
+#expenseList {
+  display: inline-block;
+  text-align: start;
+}

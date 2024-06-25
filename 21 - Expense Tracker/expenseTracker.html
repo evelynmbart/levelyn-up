@@ -10,7 +10,63 @@
 </header>
 
 <body>
-    <script></script>
+    <div id="title">
+        <h1>$$ Expense Tracker $$</h1>
+    </div>
+    <div id="content">
+        <div id="addExpense">
+            <h3>Add Expense:</h3>
+        </div>
+        <br>
+        <div id="newExpenseData">
+            <label>Amount:</label>
+            <input type="text" id="amountInput" placeholder="100.00">
+            <label>Description:</label>
+            <input type="text" id="descriptionInput" placeholder="Mother's day gift">
+            <button>Submit</button>
+        </div>
+        <hr>
+        <div id="expenses">
+            <h2>Expense History:</h2>
+            <ul id="expenseList">
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        const list = document.querySelector("ul");
+        const amountInput = document.querySelector("#amountInput");
+        const descriptionInput = document.querySelector("#descriptionInput");
+        const submitButton = document.querySelector("button");
+
+        submitButton.addEventListener("click", () => {
+            const item = amountInput.value;
+            amountInput.value = '';
+
+            const itemDescription = descriptionInput.value;
+            descriptionInput.value = '';
+
+
+
+            const listItems = document.createElement("li");
+
+            const span = listItems.appendChild(document.createElement("span"));
+            const spanTwo = listItems.appendChild(document.createElement("span"));
+
+            deleteButton = listItems.appendChild(document.createElement("button"));
+
+            span.textContent = "$" + item + " - ";
+            spanTwo.textContent = itemDescription;
+            deleteButton.textContent = "Delete";
+
+
+            list.appendChild(listItems);
+
+            deleteButton.addEventListener('click', () => {
+                list.removeChild(listItems);
+            })
+        })
+    </script>
 </body>
 
 </html>
