@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title>Expense Tracker</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book</title>
+    <link rel="stylesheet" href="hangman.css">
+</header>
+
+<body>
+    <h1>Hangman</h1>
+    <h3>Let's Play!</h3>
+
+    <div>
+        <label>Guess here:</label>
+        <input type="text">
+        <button id="submitButton" onclick="submit()">Submit</button>
+    </div>
+    <div id="missingWord"></div>
+    <div>
+        <p id="livesLeft">Lives Left: </p>
+        <div id="guessedLetters"></div>
+    </div>
+    <script>
+
+        // create an array of words to choose from
+        const words = [
+            "treaty",
+            "maximum",
+            "television",
+            "everyday",
+            "notebook",
+            "stellar",
+            "gaze",
+            "tornado",
+            "house",
+            "tree",
+            "syrup",
+            "carpet",
+            "pond",
+            "treehouse",
+            "motel",
+            "limousine",
+            "whiskey",
+            "lipstick"
+        ];
+
+        let livesLeft = 10;
+        let guess = '';
+        let word = '';
+        let guessAttempt = [];
+        const wordSoFar = [];
+
+
+        function paintLives() {
+            document.getElementById("livesLeft").innerHTML = "Lives Left: " + livesLeft;
+        }
+
+        function paintGuesses() {
+            document.getElementById("guessedLetters").innerHTML = "Letters Guessed: " + guessAttempt.join(" ");
+        }
+
+        // create a functional submit button for user's guess
+        function submit() {
+            // store user guess in guess variable and reset user value to empty string
+            const guess = userInput.value;
+            userInput.value = '';
+            // decrement livesLeft
+            livesLeft--;
+            // then update livesLeft display on screen
+            paintLives();
+
+            // create an element that appends and store the user's guesses in and displays them on the screen
+            guessAttempt.push(guess);
+
+            paintGuesses();
+
+            // log when guess is inside of word
+            if (word.includes(guess)) {
+
+            }
+
+
+        }
+
+        const userInput = document.querySelector("input");
+
+        // as letters are discovered, the underscores should switch to the correct letter guessed
+
+        // select a word randomly from the words array
+        document.addEventListener("DOMContentLoaded", () => {
+            word = words[Math.floor(Math.random() * words.length)]; // eventually make it so the words don't repeat
+            console.log(word);
+            let length = word.length;
+            console.log(length)
+            paintLives();
+
+            let underscoresArea = document.querySelector("#missingWord");
+            const underscores = document.createElement("span");
+
+
+            for (i = 0; i < length; i++) {
+                wordSoFar.push("_");
+            };
+
+            underscores.textContent = wordSoFar.join(" ");
+            underscoresArea.appendChild(underscores);
+
+            let newWord = word.split("");
+            console.log(newWord);
+
+            //if (userInput)
+            /**
+             * - Keep a "wordInProgress" variable that starts as an array of underscores
+             * - If the user ever guesses a letter correctly, change the corresponding index in wordInProgress to that letter
+             * - So you'll have like [_, _, T, _, _] if the word is motel and they guessed a T
+             * - Then you know the user won whenever wordInProgress.join("") === word
+             */
+
+        });
+
+
+    </script>
+</body>
+
+</html>

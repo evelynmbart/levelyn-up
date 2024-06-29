@@ -48,22 +48,24 @@
 
 
 
-            const listItems = document.createElement("li");
+            const listItem = document.createElement("li");
 
-            const span = listItems.appendChild(document.createElement("span"));
-            const spanTwo = listItems.appendChild(document.createElement("span"));
+            listItem.textContent = "$" + item + " - " + itemDescription;
 
-            deleteButton = listItems.appendChild(document.createElement("button"));
+            // const span = listItem.appendChild(document.createElement("span"));
+            // const spanTwo = listItem.appendChild(document.createElement("span"));
 
-            span.textContent = "$" + item + " - ";
-            spanTwo.textContent = itemDescription;
+            deleteButton = listItem.appendChild(document.createElement("button"));
+
+            // span.textContent = "$" + item + " - ";
+            // spanTwo.textContent = itemDescription;
             deleteButton.textContent = "Delete";
 
 
-            list.appendChild(listItems);
+            list.appendChild(listItem);
 
             deleteButton.addEventListener('click', () => {
-                list.removeChild(listItems);
+                list.removeChild(listItem);
             })
         })
     </script>

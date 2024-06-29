@@ -1,0 +1,11 @@
+html {
+  background-color: rgb(248, 153, 142);
+}
+body {
+  display: block;
+  text-align: center;
+}
+
+span {
+  font-size: 60px;
+}

@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+button {
+  border-radius: 100%;
+  box-shadow: 2px 2px 2px;
+  border-color: transparent;
+}
+
+#blue {
+  background-color: #258ea6;
+}
+
+#green {
+  background-color: #549f93;
+}
+
+#pink {
+  background-color: #e2b1b1;
+}
+
+#purple {
+  background-color: #e2c2ff;
+}
