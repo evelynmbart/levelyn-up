@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BMI Calculator</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bmiCalc.css">
+</head>
+
+<body>
+    <h1>BMI Calculator</h1>
+    <button id="measurementType" onClick="toggleMeasurement()">Imperial/Metric</button>
+    <p>Please insert your height and weight:</p>
+    <label>Height: </label>
+    <input id="height" type="text" placeholder="60" />
+    <span id="tall"> inches</span>
+    <br />
+    <label>Weight: </label>
+    <input id="weight" type="text" placeholder="135" />
+    <span id="heavy"> lbs</span>
+    <br />
+
+    <button type="submit" onClick="calculateBMI()">Submit</button>
+    <p id="bmi"></p>
+    <script>
+
+        let isImperial = true;
+
+        function calculateBMI() {
+            let height = document.getElementById("height").value;
+            height = Number(height);
+            console.log(height)
+            height.value = '';
+
+            let weight = document.getElementById("weight").value;
+            weight = Number(weight);
+            weight.value = '';
+
+            if (isImperial) {
+                let BMI = weight / (height ** 2) * 703;
+                document.getElementById("bmi").innerHTML = "Your BMI is in imperial " + BMI;
+            } else {
+                let BMI = (weight / height / height) * 10000;
+                document.getElementById("bmi").innerHTML = "Your BMI in metric is " + BMI;
+            }
+
+
+        }
+
+        function toggleMeasurement() {
+            if (isImperial) {
+                document.getElementById("tall").innerHTML = " cm";
+                document.getElementById("heavy").innerHTML = " kg"
+                document.getElementById("height").placeholder = "152";
+                document.getElementById("weight").placeholder = "61";
+                isImperial = false;
+            } else {
+                document.getElementById("tall").innerHTML = " inches";
+                document.getElementById("heavy").innerHTML = " lbs"
+                document.getElementById("height").placeholder = "60";
+                document.getElementById("weight").placeholder = "135";
+                isImperial = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
