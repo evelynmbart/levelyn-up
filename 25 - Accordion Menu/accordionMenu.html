@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accordion Menu</title>
+    <link rel="stylesheet" href="accordionMenu.css">
+</head>
+
+<body>
+    <h2>Accordion Menu</h2>
+    <div id="mainMenu">
+        <div id="myAccount" onclick="toggleDropDown('one')">My Account</div>
+        <div class="one">Profile</div>
+        <div class="one">Settings</div>
+        <div id="about" onclick="toggleDropDown('two')">About</div>
+        <div class="two">Team</div>
+        <div class="two">Company Message</div>
+        <div class="two">Careers</div>
+        <div id="support" onclick="toggleDropDown('three')">Support</div>
+        <div class="three">Chat with us</div>
+        <div class="three">Call us</div>
+        <div id="logOut">Log Out</div>
+
+    </div>
+    <script>
+
+        /*create a function that when the div's are clicked,
+        it should change the display of the corresponding divs to block; */
+
+        // this should be a toggle function
+
+        let isFoldedUp = true;
+
+        function toggleDropDown(className) {
+            const twoItems = document.getElementsByClassName(className)
+            if (isFoldedUp) {
+                for (let i = 0; i < twoItems.length; i++) {
+                    twoItems[i].style.display = 'block';
+                }
+                isFoldedUp = false;
+            } else {
+                for (let i = 0; i < twoItems.length; i++) {
+                    twoItems[i].style.display = 'none';
+                }
+                isFoldedUp = true;
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

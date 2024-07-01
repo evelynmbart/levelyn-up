@@ -1,0 +1,59 @@
+h2 {
+  text-align: center;
+}
+
+#mainMenu {
+  float: right;
+  border: 1px solid turquoise;
+}
+
+#myAccount {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+#about {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+#support {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+#logOut {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.one {
+  display: none;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: turquoise;
+  font-size: 12px;
+}
+
+.two {
+  display: none;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: turquoise;
+  font-size: 12px;
+}
+
+.three {
+  display: none;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: turquoise;
+  font-size: 12px;
+}
