@@ -1,0 +1,52 @@
+h2 {
+  text-align: center;
+}
+
+#body {
+  display: flex;
+  border: 1px solid black;
+  margin: 30px;
+  height: 450px;
+  justify-content: space-between;
+  position: absolute;
+}
+
+#rightContainer {
+  float: right;
+  position: relative;
+  margin: 10px;
+  width: 500px;
+}
+
+#leftContainer {
+  float: right;
+  position: relative;
+  margin: 10px;
+  width: 500px;
+}
+
+.textBox {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid blue;
+  height: 150px;
+  width: 500px;
+  text-align: center;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  border: 1px solid purple;
+  height: 250px;
+  width: 500px;
+  text-align: center;
+}
+
+#previous {
+  float: left;
+}
+
+#next {
+  float: right;
+}
