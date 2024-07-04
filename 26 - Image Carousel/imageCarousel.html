@@ -8,89 +8,80 @@
 
 <body>
     <h2>Image Carousel</h2>
-    <button id="previous" onClick="prev()">
-        < </button>
-            <div id="body">
-                <div id="leftContainer">
-                    <img class="image" src="crepeImages/">
-                    <p class="textBox"></p>
-                </div>
-                <div id="rightContainer">
-                    <img class="image" src="crepeImages/">
-                    <p class="textBox">
-                    </p>
-                </div>
-                <div id="rightContainer">
-                    <img class="image" src="crepeImages/">
-                    <p class="textBox">
-                    </p>
-                </div>
-                <div id="rightContainer">
-                    <img class="image" src="crepeImages/">
-                    <p class="textBox">
-                    </p>
-                </div>
-            </div>
-            <button id="next" onClick="next()"> > </button>
-            <script>
-                /*
-                - create an array of images and text values
-                    hmm maybe store the array image and corresponding text 
-                    in one array? ["image.jpg", "title recipe page"]
-                 */
+    <div id="body">
 
-                let currentPage = 0;
+        <button id="previous" onClick="prev()">&lt;</button>
+        <div id="leftContainer">
+            <img class="image" src="crepeImages/">
+            <p class="textBox"></p>
+        </div>
+        <div id="rightContainer">
+            <img class="image" src="crepeImages/">
+            <p class="textBox">
+            </p>
+        </div>
+        <button id="next" onClick="next()">&gt;</button>
 
-                const images = [
-                    'crepeOne.png',
-                    'crepeTwo.png',
-                    'crepeThree.png',
-                    'crepeFour.png',
-                    'crepeFive.png',
-                    'crepeSix.png'
-                ]
+    </div>
+    <script>
+        /*
+        - create an array of images and text values
+            hmm maybe store the array image and corresponding text 
+            in one array? ["image.jpg", "title recipe page"]
+         */
 
-                const textBox = [
-                    'This is a recipe for crepes',
-                    'here are the ingredients',
-                    'combine the ingredients in a blender and blend until smooth',
-                    'oil a crepe pan and heat until piping hot',
-                    'pour a thin layer of crepe batter in the pan and round until all of the bottom is evenly covered. cook until golden brown, then flip to finish the other side',
-                    'add your favorite fillings and toppings and enjoy this delicious meal'
-                ];
+        let currentPage = 0;
 
-                // store the array values in the corresponding page locations.
+        const images = [
+            'crepeOne.png',
+            'crepeTwo.png',
+            'crepeThree.png',
+            'crepeFour.png',
+            'crepeFive.png',
+            'crepeSix.png'
+        ]
 
-                function updateDisplayArea() {
-                    const imageItems = document.getElementsByClassName("image");
-                    for (i = 0; i < imageItems.length; i++) {
-                        imageItems[i].src = `crepeImages/${images[currentPage + i]}`;
-                    }
-                    // these need to be changed so it loops through the 
-                    const textItems = document.getElementsByClassName("textBox");
-                    for (i = 0; i < textItems.length; i++) {
-                        textItems[i].innerText = textBox[currentPage + i];
-                    }
-                }
+        const textBox = [
+            'This is a recipe for crepes',
+            'here are the ingredients',
+            'combine the ingredients in a blender and blend until smooth',
+            'oil a crepe pan and heat until piping hot',
+            'pour a thin layer of crepe batter in the pan and round until all of the bottom is evenly covered. cook until golden brown, then flip to finish the other side',
+            'add your favorite fillings and toppings and enjoy this delicious meal'
+        ];
 
-                // create a function that on click displays the next pages
+        // store the array values in the corresponding page locations.
 
-                function prev() {
-                    console.log("i was clicked")
-                    currentPage--;
-                    updateDisplayArea();
-                }
-                function next() {
-                    console.log("i was clicked")
-                    currentPage++;
-                    updateDisplayArea();
-                }
+        function updateDisplayArea() {
+            const imageItems = document.getElementsByClassName("image");
+            for (i = 0; i < imageItems.length; i++) {
+                imageItems[i].src = `crepeImages/${images[(currentPage + i) % images.length]}`;
+            }
+            // these need to be changed so it loops through the 
+            const textItems = document.getElementsByClassName("textBox");
+            for (i = 0; i < textItems.length; i++) {
+                textItems[i].innerText = textBox[(currentPage + i) % textBox.length];
+            }
+        }
+
+        // create a function that on click displays the next pages
+
+        function prev() {
+            console.log("i was clicked")
+            currentPage--;
+            updateDisplayArea();
+        }
+        function next() {
+            console.log("i was clicked")
+            currentPage++;
+            updateDisplayArea();
+        }
 
 
-                document.addEventListener('DOMContentLoaded', () => {
-                    updateDisplayArea();
-                })
-            </script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDisplayArea();
+        })
+    </script>
 </body>
 
 </html>
