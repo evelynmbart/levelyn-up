@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  height: 700px;
+  width: 900px;
+  border: 1px solid black;
+  margin-top: 60px;
+  position: relative;
+}
+
+.imageBox {
+  height: 600px;
+  width: 900px;
+  background-color: rgb(245, 203, 245);
+}
+
+.textBox {
+  height: 100px;
+  width: 100%;
+  background-color: azure;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
