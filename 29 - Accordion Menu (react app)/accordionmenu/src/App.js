@@ -1,29 +1,42 @@
 import './App.css';
-import { useState } from 'react';
+import MenuBar from './components/MenuBar';
 
-
-
-function MenuBar({ title, id }) {
-  return (
-    <div className="main" id={id}>{title}</div>
-  )
-}
-
-
-// if menubar is clicked clicked, one more menu bar should display.
-// this should toggle a isFoldedUp
-// if isFoldedUp == true then change display to 'block'
-// if isFoldedUp == false then change display to 'none'
+const data = [
+  {
+    title: "DOGS",
+    caption: "dogs are super cute"
+  },
+  {
+    title: "CATS",
+    caption: "cats are even cuter"
+  },
+  {
+    title: "DUCKS",
+    caption: "we like most ducks, pretty cute"
+  },
+  {
+    title: "TURTLES",
+    caption: "turtles are only kinda cute"
+  }
+]
 
 
 export default function App() {
   return (
     <div className="App">
-      <MenuBar title={"DOGS"} id={"dogs"} />
-      <MenuBar title={"CATS"} id={"cats"} />
-      <MenuBar title={"DUCKS"} id={"ducks"} />
-      <MenuBar title={"TURTLES"} id={"turtles"} />
+      {data.map((element) => {
+        return (
+          <MenuBar title={element.title} caption={element.caption} />
+        )
+      })}
     </div>
   );
 }
 
+const myarray = [1, 4, 5, 2, 3]
+
+const newarray = myarray.map((element) => {
+  return element * 3
+});
+
+// newarray = [3, 12, 15, 6, 9]

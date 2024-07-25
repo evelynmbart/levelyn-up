@@ -1,0 +1,17 @@
+.main {
+  width: 500px;
+  height: 100px;
+  border: 1px solid rgb(83, 140, 219);
+  background-color: rgb(124, 168, 231);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.subMenu {
+  width: 500px;
+  height: 100px;
+  border: 1px solid rgb(83, 140, 219);
+  background-color: rgb(124, 168, 231);
+  border-radius: 10px;
+  text-align: center;
+}
