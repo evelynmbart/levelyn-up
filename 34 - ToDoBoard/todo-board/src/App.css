@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+}
+
+#add {
+  background-color: rgb(171, 130, 238);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
+.task {
+  border: 1px solid gainsboro;
+  padding: 10px 30px;
+  border-radius: 10px;
+  flex-direction: row;
+}
+
+#delete {
+  background-color: rgb(232, 83, 105);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
