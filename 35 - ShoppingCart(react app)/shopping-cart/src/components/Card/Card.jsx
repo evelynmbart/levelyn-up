@@ -3,7 +3,13 @@ import "./Card.css";
 
 export default function Card({ card, cart, setCart }) {
   const handleClick = () => {
-    setCart([...cart, card]);
+    const newCart = { ...cart };
+    if (card.name in newCart) {
+      newCart[card.name] += 1;
+    } else {
+      newCart[card.name] = 1;
+    }
+    setCart(newCart);
   };
   return (
     <div className="card">
