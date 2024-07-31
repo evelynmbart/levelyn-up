@@ -1,0 +1,46 @@
+.board {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+  gap: 40px 80px;
+  margin: 50px;
+}
+
+.item {
+  border: 1px solid #b7c284;
+  height: 150px;
+  width: 200px;
+  position: relative;
+  border-radius: 15px;
+  background-color: #dcf1cdb8;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  height: 35px;
+  width: 40px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #6a87c6bb;
+  width: 80%;
+  height: 90%;
+}
+
+.deleteButton {
+  background-color: #6a87c6bb;
+  color: white;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}

@@ -1,0 +1,21 @@
+.navbar {
+  background: #d4e09b;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+}
+
+.userInput {
+  height: 40px;
+  margin: 45px 0 30px 30px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.886);
+  font-size: 30px;
+}
+
+input::placeholder {
+  opacity: 0.2;
+}
