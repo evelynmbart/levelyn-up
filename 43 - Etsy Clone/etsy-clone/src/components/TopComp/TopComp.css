@@ -1,0 +1,36 @@
+.top {
+  display: block;
+  justify-content: center;
+  height: 250px;
+  width: 1450px;
+  background-color: rgb(43, 170, 104);
+  color: rgb(36, 36, 104);
+}
+
+.top-text {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.top-shop-btn {
+  background-color: rgb(36, 36, 131);
+  color: rgb(43, 170, 104);
+  border-radius: 30px;
+  padding: 15px 60px;
+  font-size: 20px;
+  border: none;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 1450px;
+  border: 1px solid black;
+}
+
+.teacher-img {
+  object-fit: contain;
+  width: 725px;
+  height: 200px;
+}

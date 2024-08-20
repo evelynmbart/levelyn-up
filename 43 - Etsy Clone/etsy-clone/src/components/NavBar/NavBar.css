@@ -1,0 +1,70 @@
+.navbar {
+  display: block;
+  height: 164px;
+}
+
+.topNav {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 20px 100px 5px;
+  font-size: 25px;
+  gap: 30px;
+}
+
+.web-title {
+  color: rgb(255, 85, 0);
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 40px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search-bar {
+  border-radius: 30px;
+  padding: 20px;
+  border: 3px solid black;
+  width: 60%;
+  font-size: 20px;
+}
+
+.search-btn {
+  background-color: rgb(255, 85, 0);
+  color: white;
+  border-radius: 30px;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-general-search-btns {
+  margin: 5px 20px 5px;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  padding-top: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-general-search-btns:hover {
+  background-color: rgba(231, 231, 237, 0.75);
+}
+
+hr {
+  color: rgb(249, 246, 241);
+  border: 2px solid rgb(196, 192, 192);
+}
