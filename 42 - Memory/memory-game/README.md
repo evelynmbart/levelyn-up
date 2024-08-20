@@ -9,5 +9,5 @@
   -resetTurns
   -useEffect -> this relates to the comparison of two cards being chosen
 - give a match property in cardImages
-  - uupdate state
+  - update state
     -check if cards match
