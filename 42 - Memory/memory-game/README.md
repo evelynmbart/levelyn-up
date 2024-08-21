@@ -13,3 +13,5 @@
     -check if cards match
 - flipping cards animation/functionality (this uses state!)
 - disable more than 2 cards being flipped over (this uses state!)
+- new game automatically (uses a new useEffect function!)
+- winning end credits!

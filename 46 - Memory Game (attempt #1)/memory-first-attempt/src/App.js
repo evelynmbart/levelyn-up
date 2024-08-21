@@ -57,7 +57,6 @@ function App() {
   }, [choiceOne, choiceTwo]) // this allows the useEffect to run when choices are updated. 
   // useEffect runs on mount and everytime the dependencies are changed
 
-  console.log(cards)
 
   // reset turns
   const resetTurns = () => {
@@ -66,6 +65,14 @@ function App() {
     setTurns(prevTurns => prevTurns + 1)
     setDisabled(false)
   }
+
+  // start a game automatically 
+  // isn't in other useEffect becuase we don't want to start a new game everytime a card choice is made!(the dependencies for other useEffect)
+  useEffect(() => {
+    shuffleCards()
+    setChoiceOne(null) // reset for each new game just in case something was still selected!
+    setChoiceTwo(null)
+  }, [])
 
   return (
     <div className="App">
