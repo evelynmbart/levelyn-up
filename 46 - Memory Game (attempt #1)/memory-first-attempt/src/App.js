@@ -46,6 +46,7 @@ function App() {
             } else {
               return card
             }
+
           })
         })
         resetTurns() // reset the turn because the turn is over
@@ -73,6 +74,7 @@ function App() {
     setChoiceOne(null) // reset for each new game just in case something was still selected!
     setChoiceTwo(null)
   }, [])
+
 
   return (
     <div className="App">
@@ -102,3 +104,8 @@ function App() {
 }
 
 export default App;
+
+
+// eventually add the winning credits
+/* and add a leveling up logic, where every game you win, the next round is harder (ie has more cards) 
+  - include the level count below "new game" button*/
