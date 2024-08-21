@@ -79,7 +79,7 @@ export default function App() {
   return (
     <div className='App'>
       <div className="navbar">
-        Glazed and Confused
+        Hole in One
         <div className='sub-title'>Memory Game</div>
       </div>
       <button className='new-game-btn' onClick={shuffleCards}>New Game</button>
