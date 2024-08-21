@@ -6,8 +6,10 @@
 - create the Card component using a .map function instead of rewriting code
 - handleClicks
   -handleChoice
-  -resetTurns
+  -resetTurns (this uses prevTurns!)
   -useEffect -> this relates to the comparison of two cards being chosen
-- give a match property in cardImages
+- give a match property in cardImages (this uses .map! and prevCards)
   - update state
     -check if cards match
+- flipping cards animation/functionality (this uses state!)
+- disable more than 2 cards being flipped over (this uses state!)
