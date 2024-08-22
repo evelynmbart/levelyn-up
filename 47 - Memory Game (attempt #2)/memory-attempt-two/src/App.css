@@ -1,0 +1,56 @@
+.App {
+  max-width: 860px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  font-size: 60px;
+  background-color: white;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-top: 25px;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(242, 136, 203);
+  border-radius: 20px;
+}
+
+.sub-title {
+  font-size: 40px;
+}
+
+.new-game-btn {
+  background: none;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 15px 360px;
+}
+
+.new-game-btn:hover {
+  background-color: rgb(242, 136, 203);
+}
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.turns {
+  text-align: center;
+  font-size: 20px;
+  margin: 50px 360px;
+  background-color: rgb(242, 136, 203);
+  color: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
