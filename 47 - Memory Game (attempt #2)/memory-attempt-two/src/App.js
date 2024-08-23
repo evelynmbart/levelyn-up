@@ -32,9 +32,7 @@ function App() {
 
 
     setCards(shuffledCards)
-    setCards((prev) => {
-      return shuffledCards
-    })
+    setCards(shuffledCards)
     setTurns(0)
   }
   console.log(cards)
@@ -50,15 +48,14 @@ function App() {
     if (choiceOne && choiceTwo) {
       setDisabled(true)
       if (choiceOne.src === choiceTwo.src) {
-        setCards(prevCards => {
-          return prevCards.map((card) => {
+        setCards(
+          cards.map((card) => {
             if (card.src === choiceOne.src) {
               return { ...card, matched: true }
             } else {
               return card
             }
-          })
-        })
+          }))
         resetTurns();
       } else {
         setTimeout(() => resetTurns(), 1000)
