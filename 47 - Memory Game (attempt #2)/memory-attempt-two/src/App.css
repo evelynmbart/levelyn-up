@@ -28,10 +28,13 @@
   padding: 6px 12px;
   border-radius: 8px;
   color: white;
-  font-weight: bold;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   cursor: pointer;
   font-size: 20px;
   margin: 15px 360px;
+  width: 150px;
 }
 
 .new-game-btn:hover {
@@ -50,7 +53,11 @@
   font-size: 20px;
   margin: 50px 360px;
   background-color: rgb(242, 136, 203);
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: white;
   border-radius: 8px;
   padding: 6px 12px;
+  width: 150px;
 }

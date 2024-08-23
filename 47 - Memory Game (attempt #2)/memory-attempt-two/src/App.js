@@ -18,6 +18,10 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  /* disabled should be set to false initally. 
+  it gets switched to true when a choiceONE and choiceTWO are both valid.
+  it gets switched back to false in reset Turns
+  */
 
   //duplicate cards
   const shuffleCards = () => {
@@ -70,6 +74,8 @@ function App() {
     setDisabled(false)
   }
 
+  // start a game automatically
+
   return (
     <div className="App">
       <div className="navbar">
@@ -84,6 +90,7 @@ function App() {
             card={card}
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
+            // ask when should the cards be flipped? - choice one, two and if they are matched!
             disabled={disabled}
           />
         })}
