@@ -10,14 +10,23 @@ function App() {
     setQuestions([...questions, <Question />]);
   };
 
-  const handleDelete = () => {};
+  const handleDelete = (indexToDelete) => {
+    setQuestions(questions.filter((_, index) => index !== indexToDelete));
+  };
 
   return (
     <div className="screen">
       <h1>Survey Generator</h1>
       <h4>Build your survey then click "Take Survey" down below.</h4>
       {questions.map((question, index) => {
-        return <Question key={index} id={index + 1} question={question} />;
+        return (
+          <Question
+            key={index}
+            id={index + 1}
+            question={question}
+            handleDelete={() => handleDelete(index)}
+          />
+        );
       })}
 
       <button onClick={handleAddQuestion}>Add a question</button>
