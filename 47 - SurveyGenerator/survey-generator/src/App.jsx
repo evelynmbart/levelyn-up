@@ -3,8 +3,8 @@ import "./App.css";
 import { Question } from "./assets/Question";
 
 function App() {
-  const [question, setQuestion] = useState("");
   const [questions, setQuestions] = useState([]);
+  const [question, setQuestion] = useState("");
 
   const handleAddQuestion = () => {
     setQuestions([...questions, <Question />]);
@@ -18,11 +18,12 @@ function App() {
     <div className="screen">
       <h1>Survey Generator</h1>
       <h4>Build your survey then click "Take Survey" down below.</h4>
+      <Question id={1} />
       {questions.map((question, index) => {
         return (
           <Question
             key={index}
-            id={index + 1}
+            id={index + 2}
             question={question}
             handleDelete={() => handleDelete(index)}
           />
