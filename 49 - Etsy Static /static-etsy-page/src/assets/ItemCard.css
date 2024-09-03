@@ -16,7 +16,8 @@
 
 .name,
 .shipping {
-  color: rgb(172, 171, 171);
+  color: rgb(152, 151, 151);
+  font-size: 0.8rem;
 }
 
 .item-img {
@@ -34,4 +35,24 @@
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.price {
+  font-size: 1.1rem;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  & > svg {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    & > svg {
+      margin-left: 10px;
+    }
+  }
 }

@@ -18,7 +18,7 @@ export function ItemCard({ item }) {
           <strong>${item.price.toFixed(2)}</strong>
         </p>
         <p className="shipping">{item.freeShipping ? "Free Shipping" : ""}</p>
-        <p>
+        <p className="more">
           <strong>More like this</strong>
           <ArrowRight size={16} weight="bold" />
         </p>
