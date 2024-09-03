@@ -1,18 +1,29 @@
 .background-div {
-  max-height: 250px;
+  height: 250px;
   width: 100%;
-  background-color: rgba(194, 228, 255, 0.546);
+  background-color: rgba(155, 209, 252, 0.546);
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 10px;
+  padding-top: 20px;
+}
+
+.content-div {
+  background: transparent;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
 }
 
 .home-favorites {
   font-size: 4rem;
-  padding-top: 425px;
+  padding-top: 1020px;
+  background-color: transparent;
 }
 
 .sub-title {
@@ -21,6 +32,7 @@
   text-align: center;
   font-family: sans-serif;
   font-weight: 400;
+  background-color: transparent;
 }
 
 .search-bubbles {
@@ -29,6 +41,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
+  background-color: transparent;
 }
 
 .shop {
@@ -44,7 +57,7 @@
 
 .filter-btn {
   align-self: flex-start;
-  margin-left: 165px;
+  margin-left: -25px;
   margin-bottom: 30px;
 }
 

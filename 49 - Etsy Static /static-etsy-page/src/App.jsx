@@ -123,32 +123,35 @@ function App() {
   return (
     <>
       <div className="background-div">
-        <div className="home-favorites">
-          Home Favorites
-          <p className="sub-title">
-            Every room is a new opportunity to express yourself with incredible
-            style from incredible sellers.
-          </p>
-        </div>
-        <div className="search-bubbles">
-          {bubbleData.map((bubble, index) => {
-            return <Bubble key={index} bubble={bubble} />;
-          })}
-        </div>
-        <div className="fall-decor-container">
-          <div>Fall Entertaining & Decor</div>
-        </div>
-        <div className="filter-btn">
-          <button className="btn">
-            <SlidersHorizontal size={16} weight="bold" />
-            Filters
-          </button>
-        </div>
+        <div className="content-div">
+          <div className="home-favorites">
+            Home Favorites
+            <p className="sub-title">
+              Every room is a new opportunity to express yourself with
+              incredible style from incredible sellers.
+            </p>
+          </div>
+          <div className="search-bubbles">
+            {bubbleData.map((bubble, index) => {
+              return <Bubble key={index} bubble={bubble} />;
+            })}
+          </div>
 
-        <div className="shop">
-          {shoppingData.map((item, index) => {
-            return <ItemCard key={index} item={item} />;
-          })}
+          <div className="fall-decor-container">
+            <div>Fall Entertaining & Decor</div>
+          </div>
+          <div className="filter-btn">
+            <button className="btn">
+              <SlidersHorizontal size={16} weight="bold" />
+              Filters
+            </button>
+          </div>
+
+          <div className="shop">
+            {shoppingData.map((item, index) => {
+              return <ItemCard key={index} item={item} />;
+            })}
+          </div>
         </div>
       </div>
     </>
