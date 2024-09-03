@@ -138,10 +138,13 @@ function App() {
         <div className="fall-decor-container">
           <div>Fall Entertaining & Decor</div>
         </div>
-        <button className="filters-btn">
-          <SlidersHorizontal size={32} />
-          Filters
-        </button>
+        <div className="filter-btn">
+          <button className="btn">
+            <SlidersHorizontal size={16} weight="bold" />
+            Filters
+          </button>
+        </div>
+
         <div className="shop">
           {shoppingData.map((item, index) => {
             return <ItemCard key={index} item={item} />;

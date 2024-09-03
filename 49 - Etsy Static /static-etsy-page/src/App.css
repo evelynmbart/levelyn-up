@@ -35,3 +35,33 @@
   display: flex;
   gap: 20px;
 }
+
+.fall-decor-container {
+  font-size: 2rem;
+  display: flex;
+  margin-top: 50px;
+}
+
+.filter-btn {
+  align-self: flex-start;
+  margin-left: 165px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 85px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 10px 1px rgba(242, 208, 163, 0.872);
+}

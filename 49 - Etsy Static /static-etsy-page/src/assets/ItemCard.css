@@ -4,6 +4,7 @@
   flex-direction: column;
   font-weight: lighter;
   max-width: 295px;
+  cursor: pointer;
 }
 
 .card-info {
