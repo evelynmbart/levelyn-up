@@ -1,9 +1,9 @@
-import { useState } from "react";
 import "./App.css";
-import { Bubble } from "./assets/Bubble";
 import "./assets/Bubble.css";
-import { SlidersHorizontal } from "@phosphor-icons/react";
+import "./assets/ItemCard.css";
+import { Bubble } from "./assets/Bubble";
 import { ItemCard } from "./assets/ItemCard";
+import { SlidersHorizontal } from "@phosphor-icons/react";
 
 const bubbleData = [
   {
@@ -70,7 +70,7 @@ const bubbleData = [
 
 const shoppingData = [
   {
-    title: "Fall wreath for Front Door.",
+    title: "Fall wreath for Front Door",
     src: "https://i.etsystatic.com/22836680/r/il/e3413f/6140168042/il_300x300.6140168042_gugh.jpg",
     alt: "fall wreath.",
     stats: {
@@ -106,7 +106,7 @@ const shoppingData = [
     freeShipping: false,
   },
   {
-    title: "MADE TO ORDER- Trio Oval Serving Plates",
+    title: "MADE TO ORDER - Trio Oval Serving Plates",
     src: "https://i.etsystatic.com/13724564/r/il/6632e6/4381965322/il_300x300.4381965322_3hny.jpg",
     alt: "lemons on speckled oval serving plates stacked together.",
     stats: {

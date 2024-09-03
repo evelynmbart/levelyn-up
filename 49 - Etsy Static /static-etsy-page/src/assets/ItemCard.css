@@ -1,0 +1,36 @@
+.item-card {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  max-width: 295px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  line-height: 25px;
+}
+
+.name,
+.shipping {
+  color: rgb(172, 171, 171);
+}
+
+.item-img {
+  border-radius: 3px;
+}
+.item-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stats {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

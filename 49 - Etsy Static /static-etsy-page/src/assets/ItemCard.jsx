@@ -5,20 +5,24 @@ export function ItemCard({ item }) {
   return (
     <div className="item-card">
       <img className="item-img" src={item.src} alt={item.alt} />
-      <p>{item.title}</p>
-      <span>
-        <strong>{item.stats.rating}</strong>
-        <Star weight="fill" />({item.stats.reviewCount})
-      </span>
-      <p>{item.name}</p>
-      <p>
-        <strong>${item.price.toFixed(2)}</strong>
-      </p>
-      <p>{item.freeShipping ? "Free Shipping" : ""}</p>
-      <p>
-        <strong>More like this</strong>
-        <ArrowRight size={16} weight="bold" />
-      </p>
+      <div className="card-info">
+        <p className="item-title" title={item.title}>
+          {item.title}
+        </p>
+        <span className="stats">
+          <strong>{item.stats.rating}</strong>
+          <Star weight="fill" size={16} />({item.stats.reviewCount})
+        </span>
+        <p className="name">{item.name}</p>
+        <p className="price">
+          <strong>${item.price.toFixed(2)}</strong>
+        </p>
+        <p className="shipping">{item.freeShipping ? "Free Shipping" : ""}</p>
+        <p>
+          <strong>More like this</strong>
+          <ArrowRight size={16} weight="bold" />
+        </p>
+      </div>
     </div>
   );
 }

@@ -30,3 +30,8 @@
   justify-content: center;
   margin-top: 10px;
 }
+
+.shop {
+  display: flex;
+  gap: 20px;
+}
