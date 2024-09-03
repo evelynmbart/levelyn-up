@@ -3,6 +3,7 @@ import "./App.css";
 import { Bubble } from "./assets/Bubble";
 import "./assets/Bubble.css";
 import { SlidersHorizontal } from "@phosphor-icons/react";
+import { ItemCard } from "./assets/ItemCard";
 
 const bubbleData = [
   {
@@ -141,7 +142,11 @@ function App() {
           <SlidersHorizontal size={32} />
           Filters
         </button>
-        <div className=" "></div>
+        <div className="shop">
+          {shoppingData.map((item, index) => {
+            return <ItemCard key={index} item={item} />;
+          })}
+        </div>
       </div>
     </>
   );
