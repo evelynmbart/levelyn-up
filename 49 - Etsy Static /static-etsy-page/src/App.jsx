@@ -67,6 +67,57 @@ const bubbleData = [
   },
 ];
 
+const shoppingData = [
+  {
+    title: "Fall wreath for Front Door.",
+    src: "https://i.etsystatic.com/22836680/r/il/e3413f/6140168042/il_300x300.6140168042_gugh.jpg",
+    alt: "fall wreath.",
+    stats: {
+      rating: 4.7,
+      reviewCount: 203,
+    },
+    name: "LuxePetalsHomeDecor",
+    price: 138.0,
+    freeShipping: true,
+  },
+  {
+    title: "Fall Wreath, Fall Pampas Wreath, Wreath Autumn",
+    src: "https://i.etsystatic.com/22533494/r/il/5208f1/5214784204/il_300x300.5214784204_gvdu.jpg",
+    alt: "fall leafy wreath.",
+    stats: {
+      rating: 4.7,
+      reviewCount: 181,
+    },
+    name: "RusticByRichard",
+    price: 65.0,
+    freeShipping: true,
+  },
+  {
+    title: "Pumpkin Candles / Fall Decor",
+    src: "https://i.etsystatic.com/17195470/c/2000/2000/0/674/il/b6da92/5148206630/il_300x300.5148206630_428l.jpg",
+    alt: "pumpkin shaped candles on wooden stoop",
+    stats: {
+      rating: 4.7,
+      reviewCount: 585,
+    },
+    name: "ShopOfHappyGifts",
+    price: 4.0,
+    freeShipping: false,
+  },
+  {
+    title: "MADE TO ORDER- Trio Oval Serving Plates",
+    src: "https://i.etsystatic.com/13724564/r/il/6632e6/4381965322/il_300x300.4381965322_3hny.jpg",
+    alt: "lemons on speckled oval serving plates stacked together.",
+    stats: {
+      rating: 4.9,
+      reviewCount: "1.8K",
+    },
+    name: "SenayCeramics",
+    price: 98.83,
+    freeShipping: true,
+  },
+];
+
 function App() {
   return (
     <>
