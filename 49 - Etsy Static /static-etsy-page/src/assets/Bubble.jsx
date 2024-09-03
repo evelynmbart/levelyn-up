@@ -3,12 +3,12 @@ import { ArrowRight } from "@phosphor-icons/react";
 
 export function Bubble({ bubble }) {
   return (
-    <div className="bubble">
-      <img className="bubble-images" src={bubble.src} />
-      <button className="bubble-btn">
+    <button className="bubble">
+      <img className="bubble-images" src={bubble.src} alt={bubble.alt} />
+      <div className="bubble-arrow">
         {bubble.title}
         <ArrowRight className="arrow" size={16} weight="bold" />
-      </button>
-    </div>
+      </div>
+    </button>
   );
 }
