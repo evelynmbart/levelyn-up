@@ -1,16 +1,24 @@
-export function Question({ question, index }) {
+export function Question({ question, index, selectedAnswer, onSelectAnswer }) {
+  // Use these!
   return (
     <fieldset>
       <legend>{question.question}</legend>
       <div>
-        <input type="radio" id="answer1" name={index} value="optionA" />
-        <label for="answer1">{question.optionA}</label>
+        <input
+          type="radio"
+          id="answer1"
+          name={index}
+          value="optionA"
+          checked={selectedAnswer === question.optionA}
+          onClick={onSelectAnswer}
+        />
+        <label htmlFor="answer1">{question.optionA}</label>
         <input type="radio" id="answer2" name={index} value="optionA" />
-        <label for="answer2">{question.optionB}</label>
+        <label htmlFor="answer2">{question.optionB}</label>
         <input type="radio" id="answer3" name={index} value="optionC" />
-        <label for="answer3">{question.optionC}</label>
+        <label htmlFor="answer3">{question.optionC}</label>
         <input type="radio" id="answer4" name={index} value="optionD" />
-        <label for="answer4">{question.optionD}</label>
+        <label htmlFor="answer4">{question.optionD}</label>
       </div>
     </fieldset>
   );

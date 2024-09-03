@@ -46,16 +46,39 @@ const quizQuestions = [
 ];
 
 function App() {
+  const [userAnswers, setUserAnswers] = useState(
+    quizQuestions.map(() => {
+      return "";
+    })
+  );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
+  const handleSelectAnswer = (questionIndex, answer) => {
+    // Set the relevant userAnswers element to the given answer
+  };
+
   return (
     <>
       <div className="navbar">Pop Quiz!</div>
       <button>Start Quiz</button>
       <div className="question-container">
-        <form>
+        <form onSubmit={handleSubmit}>
           {quizQuestions.map((question, index) => {
-            return <Question key={index} question={question} index={index++} />;
+            return (
+              <Question
+                key={index}
+                question={question}
+                index={index++}
+                selectedAnswer={userAnswers[index]}
+                onSelectAnswer={handleSelectAnswer}
+              />
+            );
           })}
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </>
