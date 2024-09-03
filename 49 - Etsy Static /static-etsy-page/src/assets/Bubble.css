@@ -29,4 +29,15 @@
   justify-content: center;
   margin-top: 15px;
   gap: 5px;
+  word-break: keep-all;
+
+  & > svg {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    & > svg {
+      margin-left: 12px;
+    }
+  }
 }

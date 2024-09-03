@@ -141,6 +141,7 @@ function App() {
           <SlidersHorizontal size={32} />
           Filters
         </button>
+        <div className=" "></div>
       </div>
     </>
   );
