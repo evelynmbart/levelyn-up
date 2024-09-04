@@ -1,9 +1,11 @@
 import "./App.css";
 import "./assets/Bubble.css";
 import "./assets/ItemCard.css";
+import "./assets/Tile.css";
 import { Bubble } from "./assets/Bubble";
 import { ItemCard } from "./assets/ItemCard";
 import { SlidersHorizontal } from "@phosphor-icons/react";
+import { Tile } from "./assets/Tile";
 
 const bubbleData = [
   {
@@ -119,6 +121,29 @@ const shoppingData = [
   },
 ];
 
+const tileData = [
+  {
+    title: "Exploring Unique Wall Art",
+    src: "https://i.etsystatic.com/ij/31a866/6263627239/ij_340x270.6263627239_abj6ssgs.jpg?version=0",
+    alt: "framed abstract painting.",
+  },
+  {
+    title: "Vintage Home Decor",
+    src: "https://i.etsystatic.com/ij/a298f7/5174276257/ij_340x270.5174276257_8xwub55r.jpg?version=0",
+    alt: "vintage yellow hanging light.",
+  },
+  {
+    title: "Global Seller Spotlight",
+    src: "https://i.etsystatic.com/ij/771d87/6137069042/ij_340x270.6137069042_4uzri7ud.jpg?version=0",
+    alt: "handmade tulip chalices.",
+  },
+  {
+    title: "Best of Etsy Home Deals",
+    src: "https://i.etsystatic.com/ij/bad474/5171059925/ij_340x270.5171059925_pk3nu71l.jpg?version=0",
+    alt: "bed sheets.",
+  },
+];
+
 function App() {
   return (
     <>
@@ -152,6 +177,14 @@ function App() {
               return <ItemCard key={index} item={item} />;
             })}
           </div>
+          {/* <div className="discover-more">
+            <div className="discover-title">Discover More</div>
+            <div className="tiles-container">
+              {tileData.map((tile, index) => {
+                return <Tile key={index} tile={tile} />;
+              })}
+            </div>
+          </div> */}
         </div>
       </div>
     </>

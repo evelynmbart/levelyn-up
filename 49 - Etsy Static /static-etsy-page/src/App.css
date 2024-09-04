@@ -78,3 +78,18 @@
 .btn:hover {
   box-shadow: 1px 1px 10px 1px rgba(242, 208, 163, 0.872);
 }
+
+/* .discover-title {
+  font-size: 1.75rem;
+  font-family: sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tiles-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-center;
+  margin-top: 20px;
+} */
