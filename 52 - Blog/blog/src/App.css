@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#second-label {
+  margin-top: 20px;
+}
