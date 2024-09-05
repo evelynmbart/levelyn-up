@@ -1,0 +1,59 @@
+.item-card {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  max-width: 295px;
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  line-height: 25px;
+}
+
+.name,
+.shipping {
+  color: rgb(152, 151, 151);
+  font-size: 0.8rem;
+}
+
+.item-img {
+  border-radius: 3px;
+}
+.item-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stats {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.1rem;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  gap: 5px;
+
+  & > svg {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    & > svg {
+      margin-left: 10px;
+    }
+  }
+}
