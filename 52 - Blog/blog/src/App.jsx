@@ -23,6 +23,7 @@ function App() {
     setPostsArray(postsArray.filter((_, index) => index !== indexToDelete));
   };
 
+  // For review
   const handleEdit = (indexToEdit, newFormData) => {
     setPostsArray(
       postsArray.map((post, index) => {

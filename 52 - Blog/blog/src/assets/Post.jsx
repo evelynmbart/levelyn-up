@@ -14,6 +14,7 @@ export function Post({ post, handleDelete, handleEdit }) {
     setLikes(likes + 1);
   };
 
+  // For review
   const handleSubmit = (e) => {
     e.preventDefault();
     handleEdit(formData);
