@@ -1,0 +1,42 @@
+.post-container {
+  border: 1px solid black;
+  height: 300px;
+  width: 600px;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.delete-btn {
+  padding: 3px 20px;
+  border-radius: 7px;
+  border: 1px solid black;
+  display: flex;
+  margin-top: 10px;
+  background-color: rgb(248, 153, 153);
+  cursor: pointer;
+}
+
+.post {
+  flex-direction: column;
+  display: flex;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.upvote-btn {
+  display: flex;
+  margin-top: 10px;
+  padding: 3px 20px;
+  background-color: rgb(143, 210, 242);
+  border-radius: 7px;
+  border: 1px solid black;
+  cursor: pointer;
+}
