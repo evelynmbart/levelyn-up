@@ -23,6 +23,18 @@ function App() {
     setPostsArray(postsArray.filter((_, index) => index !== indexToDelete));
   };
 
+  const handleEdit = (indexToEdit, newFormData) => {
+    setPostsArray(
+      postsArray.map((post, index) => {
+        if (index === indexToEdit) {
+          return newFormData;
+        } else {
+          return post;
+        }
+      })
+    );
+  };
+
   return (
     <>
       <nav>Blog</nav>
@@ -62,6 +74,7 @@ function App() {
               key={index}
               post={post}
               handleDelete={() => handleDelete(index)}
+              handleEdit={(newFormData) => handleEdit(index, newFormData)}
             />
           );
         })}
