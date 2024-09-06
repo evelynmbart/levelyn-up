@@ -19,13 +19,22 @@ input {
   font-weight: bold;
   color: white;
   border: none;
+  margin-left: 10px;
+}
+
+.list-of-tasks {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
 }
 
 .task {
   border: 1px solid gainsboro;
   padding: 10px 30px;
   border-radius: 10px;
-  flex-direction: row;
 }
 
 #delete {
