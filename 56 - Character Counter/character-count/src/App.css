@@ -4,3 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
