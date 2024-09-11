@@ -4,3 +4,17 @@
   padding: 2rem;
   text-align: center;
 }
+
+.submit-btn {
+  border: 1px solid white;
+}
+
+.list-of-items {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 50px;
+  width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
