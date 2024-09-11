@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+img {
+  object-fit: contain;
+  height: 200px;
+}
