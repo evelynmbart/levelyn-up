@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-confetti": "^6.1.0",
+    "react-confetti-explosion": "^2.1.2"
+  }
+}

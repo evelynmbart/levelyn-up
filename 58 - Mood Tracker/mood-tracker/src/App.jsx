@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <button className="content"> How are you today?</button>
+        <div className="content"> How are you today?</div>
         <div className="faces">
           <button className="happy">
             <img src="happy.png" />
