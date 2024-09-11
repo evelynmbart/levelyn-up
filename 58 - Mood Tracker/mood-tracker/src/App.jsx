@@ -22,6 +22,7 @@ function App() {
 
         <label>What's on your mind?</label>
         <textarea placeholder="Today was a doozy..."></textarea>
+        <button>Submit</button>
       </div>
     </>
   );
