@@ -14,18 +14,18 @@ const quotes = [
 
 function App() {
   const [quote, setQuote] = useState(quotes[0]);
-  const handleClick = () => {
+
+  const generateRandomQuote = () => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     setQuote(quotes[randomIndex]);
   };
-
   // loop through the array and on each click the function should display the index
   // as well as increment the index by 1
 
   return (
     <>
       <h3>Generate a Random Quote</h3>
-      <button onClick={handleClick}>Click here!</button>
+      <button onClick={generateRandomQuote}>Click Here!</button>
       <p>{quote}</p>
     </>
   );
