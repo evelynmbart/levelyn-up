@@ -1,7 +1,12 @@
-export function Main() {
+export function Main({ data }) {
   return (
-    <div>
-      <div></div>
+    <div className="image-container">
+      <img
+        className="background-img"
+        src={data.url}
+        alt={data?.title || "background-image"}
+      />
+      ;
     </div>
   );
 }
