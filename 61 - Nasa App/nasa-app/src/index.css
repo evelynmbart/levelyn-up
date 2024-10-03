@@ -31,6 +31,7 @@ button {
 .image-container {
   display: flex;
   flex-direction: column;
+  min-width: 70%;
   width: 100%;
 }
 
@@ -94,7 +95,7 @@ footer button:hover {
   display: flex;
   flex-direction: column;
   z-index: 10;
-  max-width: 30%;
+  max-width: 40%;
 }
 
 .background-overlay {
@@ -102,6 +103,7 @@ footer button:hover {
   inset: 0;
   background: #030615;
   opacity: 0.6;
+  width: 90%;
 }
 
 .sidebar-content {
@@ -113,7 +115,7 @@ footer button:hover {
   padding: 1rem;
   overflow-y: scroll;
   height: 100%;
-  width: 100%;
+  width: 90%;
   margin-left: auto;
   background: #030615;
 }
@@ -121,12 +123,10 @@ footer button:hover {
 .sidebar-content h2 {
   font-weight: 200;
   font-size: 1.4rem;
-  width: 100%;
 }
 
 .sidebar-content div {
   flex: 1;
-  width: 100%;
 }
 
 .sidebar-content button {
@@ -138,7 +138,6 @@ footer button:hover {
   cursor: pointer;
   transition-duration: 200ms;
   padding: 1rem 0;
-  width: 100%;
 }
 
 .sidebar-content button:hover {
