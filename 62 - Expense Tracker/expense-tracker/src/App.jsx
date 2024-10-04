@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { Home } from "./components/Home";
+import { ExpenseTracker } from "./components/ExpenseTracker";
+import "./components/ExpenseTracker.css";
 import { GetStarted } from "./components/GetStarted";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<GetStarted />} />
-        <Route path="/user-page" element={<Home />} />
+        <Route path="/expense-tracker" element={<ExpenseTracker />} />
       </Routes>
     </BrowserRouter>
   );

@@ -11,7 +11,7 @@ export function GetStarted() {
           <div className="welcome-text">
             <p>Welcome to Expense Tracker</p>
             <button>
-              <Link id="getting-started-link" to="/user-page">
+              <Link id="getting-started-link" to="/expense-tracker">
                 Let's get started!
               </Link>
             </button>
