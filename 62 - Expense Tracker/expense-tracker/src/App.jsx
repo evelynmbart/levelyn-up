@@ -1,21 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Home } from "./components/Home";
+import { GetStarted } from "./components/GetStarted";
 
 function App() {
   return (
-    <div className="main-div">
-      <nav className="navbar">
-        <h1 className="title">Expense Tracker</h1>
-      </nav>
-      <div className="welcome-content">
-        <div className="welcome-div">
-          <div className="welcome-text">
-            <p>Welcome to Expense Tracker</p>
-            <button>Let's get started!</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<GetStarted />} />
+        <Route path="/user-page" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
