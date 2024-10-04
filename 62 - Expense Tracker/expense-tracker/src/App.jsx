@@ -1,4 +1,5 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <div className="welcome-div">
           <div className="welcome-text">
             <p>Welcome to Expense Tracker</p>
-            <button onClick={handleClick}>Let's get started!</button>
+            <button>Let's get started!</button>
           </div>
         </div>
       </div>
