@@ -1,0 +1,48 @@
+.main-div {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.welcome-content {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-div {
+  height: 50%;
+  width: 40%;
+  background-color: mediumaquamarine;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  gap: 20px;
+  color: white;
+}
+
+.welcome-text button {
+  font-size: 1.5rem;
+  background-color: teal;
+  color: white;
+}
+
+.welcome-text button:hover {
+  color: rgb(245, 245, 187);
+}
