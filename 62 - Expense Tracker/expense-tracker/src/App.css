@@ -44,10 +44,6 @@
   background-color: teal;
 }
 
-#getting-started-link:hover {
-  color: rgb(245, 245, 187);
-}
-
 #getting-started-link {
   text-decoration: none;
   color: white;

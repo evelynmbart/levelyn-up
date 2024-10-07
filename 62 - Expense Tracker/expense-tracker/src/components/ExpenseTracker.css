@@ -30,17 +30,39 @@ form {
   padding: 20px;
   color: white;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.same-line {
+.date-and-transaction-type {
   display: flex;
   justify-content: space-between;
 }
 
+.type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.type button {
+  font-size: 1rem;
+}
+
+.amount,
+.location,
+.category,
+.notes {
+  display: flex;
+  flex-direction: column;
+}
+
 input {
   border-radius: 6px;
-  font-size: 1.2rem;
-  text-indent: 6px;
+  font-size: 1.1rem;
+  text-indent: 4px;
+  padding: 2px;
 }
 
 input::placeholder {
@@ -48,5 +70,13 @@ input::placeholder {
 }
 
 .date input {
+  font-size: 1rem;
+}
+
+textarea {
+  height: 100px;
+  border-radius: 6px;
+  text-indent: 6px;
+  color: rgb(114, 114, 114);
   font-size: 1rem;
 }
