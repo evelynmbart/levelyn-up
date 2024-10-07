@@ -33,7 +33,7 @@ export function ExpenseTracker() {
             <form>
               <div className="date-and-transaction-type">
                 <div className="date">
-                  <label>Date</label>
+                  <label>Date:</label>
                   <input type="date" />
                 </div>
                 <div className="type">
@@ -52,6 +52,7 @@ export function ExpenseTracker() {
                 <input type="text" placeholder="Key Food" />
               </div>
               <div className="category">
+                <label>Category: </label>
                 <select className="category-select">
                   <option value={transactionCategories.bills}>
                     {transactionCategories.bills}
@@ -98,7 +99,9 @@ export function ExpenseTracker() {
                 <label>Additional Notes: </label>
                 <textarea placeholder="Making a special occasion dinner.." />
               </div>
-              <button className="add-transaction">Add Transaction</button>
+              <button className="add-transaction" type="submit">
+                Add Transaction
+              </button>
             </form>
           </div>
         )}

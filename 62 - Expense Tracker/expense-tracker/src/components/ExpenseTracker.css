@@ -23,10 +23,10 @@
 }
 
 form {
-  height: 600px;
+  height: 450px;
   width: 500px;
   background-color: mediumaquamarine;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px;
   color: white;
   font-size: 1.4rem;
@@ -40,7 +40,8 @@ form {
   justify-content: space-between;
 }
 
-.type {
+.type,
+.date {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,6 +64,7 @@ input {
   font-size: 1.1rem;
   text-indent: 4px;
   padding: 2px;
+  padding-top: 3px;
 }
 
 input::placeholder {
@@ -71,12 +73,30 @@ input::placeholder {
 
 .date input {
   font-size: 1rem;
+  color: rgb(180, 178, 178);
+}
+
+select {
+  background-color: white;
+  border-radius: 6px;
+  text-indent: 2px;
+  font-size: 1.1rem;
+  color: rgb(180, 178, 178);
+  padding-top: 3px;
 }
 
 textarea {
+  max-height: 100px;
   height: 100px;
+  min-width: 500px;
+  max-width: 500px;
   border-radius: 6px;
   text-indent: 6px;
   color: rgb(114, 114, 114);
   font-size: 1rem;
+  padding-top: 3px;
+}
+
+.add-transaction {
+  font-size: 1.3rem;
 }
