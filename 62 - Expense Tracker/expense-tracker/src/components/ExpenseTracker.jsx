@@ -2,6 +2,23 @@ import { useState } from "react";
 
 export function ExpenseTracker() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const transactionCategories = {
+    bills: "Bills",
+    groceries: "Groceries",
+    gifts: "Gifts",
+    transportation: "Transportation",
+    travel: "Travel / Vacation",
+    entertainment: "Entertainment",
+    personalCare: "Personal Care",
+    goingOut: "Going Out",
+    insurance: "Insurance",
+    paycheck: "Paycheck",
+    parking: "Parking",
+    petSupplies: "Pet Supplies",
+    health: "Health and Wellness",
+  };
+
   return (
     <>
       <nav className="expense-navbar">
@@ -35,8 +52,47 @@ export function ExpenseTracker() {
                 <input type="text" placeholder="Key Food" />
               </div>
               <div className="category">
-                <label>Category: </label>
-                <input type="text" placeholder="Groceries" />
+                <select className="category-select">
+                  <option value={transactionCategories.bills}>
+                    {transactionCategories.bills}
+                  </option>
+                  <option value={transactionCategories.groceries}>
+                    {transactionCategories.groceries}
+                  </option>
+                  <option value={transactionCategories.paycheck}>
+                    {transactionCategories.paycheck}
+                  </option>
+                  <option value={transactionCategories.insurance}>
+                    {transactionCategories.insurance}
+                  </option>
+                  <option value={transactionCategories.transportation}>
+                    {transactionCategories.transportation}
+                  </option>
+                  <option value={transactionCategories.goingOut}>
+                    {transactionCategories.goingOut}
+                  </option>
+                  <option value={transactionCategories.travel}>
+                    {transactionCategories.travel}
+                  </option>
+                  <option value={transactionCategories.entertainment}>
+                    {transactionCategories.entertainment}
+                  </option>
+                  <option value={transactionCategories.personalCare}>
+                    {transactionCategories.personalCare}
+                  </option>
+                  <option value={transactionCategories.health}>
+                    {transactionCategories.health}
+                  </option>
+                  <option value={transactionCategories.petSupplies}>
+                    {transactionCategories.petSupplies}
+                  </option>
+                  <option value={transactionCategories.gifts}>
+                    {transactionCategories.gifts}
+                  </option>
+                  <option value={transactionCategories.parking}>
+                    {transactionCategories.parking}
+                  </option>
+                </select>
               </div>
               <div className="notes">
                 <label>Additional Notes: </label>
