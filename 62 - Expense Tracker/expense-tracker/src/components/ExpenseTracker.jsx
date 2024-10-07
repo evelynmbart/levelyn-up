@@ -29,7 +29,7 @@ export function ExpenseTracker() {
           {isFormOpen ? "Close Transaction" : "Add Transaction"}
         </button>
         {isFormOpen && (
-          <div className="expense-form">
+          <div className="transaction-form">
             <form>
               <div className="date-and-transaction-type">
                 <div className="date">
