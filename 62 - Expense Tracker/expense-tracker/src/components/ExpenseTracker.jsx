@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export function ExpenseTracker() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isIncome, setIsIncome] = useState(null);
 
   const transactionCategories = {
     bills: "Bills",
@@ -30,16 +31,32 @@ export function ExpenseTracker() {
         </button>
         {isFormOpen && (
           <div className="transaction-form">
-            <form>
+            <div className="form">
               <div className="date-and-transaction-type">
                 <div className="date">
                   <label>Date:</label>
                   <input type="date" />
                 </div>
                 <div className="type">
-                  <label>Expense or Income</label>
-                  <button>+</button>
-                  <button>-</button>
+                  <label>Income or Expense</label>
+                  <button
+                    onClick={() => setIsIncome(true)}
+                    style={{
+                      backgroundColor: isIncome ? "lightgreen" : "white",
+                    }}
+                    title="Income"
+                  >
+                    +
+                  </button>
+                  <button
+                    onClick={() => setIsIncome(false)}
+                    style={{
+                      backgroundColor: !isIncome ? "#fc6e6e" : "white",
+                    }}
+                    title="Expense"
+                  >
+                    -
+                  </button>
                 </div>
               </div>
               <div className="amount">
@@ -102,7 +119,7 @@ export function ExpenseTracker() {
               <button className="add-transaction" type="submit">
                 Add Transaction
               </button>
-            </form>
+            </div>
           </div>
         )}
       </div>

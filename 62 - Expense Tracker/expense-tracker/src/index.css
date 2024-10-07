@@ -16,7 +16,3 @@ button {
   color: white;
   background-color: teal;
 }
-
-button:hover {
-  color: rgb(245, 245, 187);
-}
