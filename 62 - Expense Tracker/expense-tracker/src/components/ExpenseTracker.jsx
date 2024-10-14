@@ -1,24 +1,56 @@
 import { useState } from "react";
 
+const transactionCategories = {
+  bills: "Bills",
+  groceries: "Groceries",
+  gifts: "Gifts",
+  transportation: "Transportation",
+  travel: "Travel / Vacation",
+  entertainment: "Entertainment",
+  personalCare: "Personal Care",
+  goingOut: "Going Out",
+  insurance: "Insurance",
+  paycheck: "Paycheck",
+  parking: "Parking",
+  petSupplies: "Pet Supplies",
+  health: "Health and Wellness",
+};
+
 export function ExpenseTracker() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isIncome, setIsIncome] = useState(null);
+  const [input, setInput] = useState([]);
 
-  const transactionCategories = {
-    bills: "Bills",
-    groceries: "Groceries",
-    gifts: "Gifts",
-    transportation: "Transportation",
-    travel: "Travel / Vacation",
-    entertainment: "Entertainment",
-    personalCare: "Personal Care",
-    goingOut: "Going Out",
-    insurance: "Insurance",
-    paycheck: "Paycheck",
-    parking: "Parking",
-    petSupplies: "Pet Supplies",
-    health: "Health and Wellness",
+  const data = [
+    {
+      date: "",
+      income: false,
+      amount: 0,
+      location: "",
+      category: "",
+      notes: "",
+    },
+  ];
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
   };
+
+  const handleTransactionTypeChange = () => {
+    setInput((prevInput) => ({
+      ...prevInput,
+      income: !prevInput.income,
+    }));
+  };
+
+  const handleSubmit = () => {
+    setInput(input);
+  };
+
+  console.log(data.income);
 
   return (
     <>
@@ -27,33 +59,40 @@ export function ExpenseTracker() {
       </nav>
       <div className="expense-tracker-content">
         <button className="add-btn" onClick={() => setIsFormOpen(!isFormOpen)}>
-          {isFormOpen ? "Close Transaction" : "Add Transaction"}
+          {isFormOpen ? "Close Transaction" : "Add New Transaction"}
         </button>
         {isFormOpen && (
           <div className="transaction-form">
-            <div className="form">
+            <form onSubmit={handleSubmit} className="form">
               <div className="date-and-transaction-type">
                 <div className="date">
                   <label>Date:</label>
-                  <input type="date" />
+                  <input
+                    type="date"
+                    name="date"
+                    value={data.date}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="type">
                   <label>Income or Expense</label>
                   <button
-                    onClick={() => setIsIncome(true)}
+                    type="button"
                     style={{
-                      backgroundColor: isIncome ? "lightgreen" : "white",
+                      backgroundColor: data.income ? "lightgreen" : "white",
                     }}
                     title="Income"
+                    onClick={handleTransactionTypeChange}
                   >
                     +
                   </button>
                   <button
-                    onClick={() => setIsIncome(false)}
+                    type="button"
                     style={{
-                      backgroundColor: !isIncome ? "#fc6e6e" : "white",
+                      backgroundColor: !data.income ? "#fc6e6e" : "white",
                     }}
                     title="Expense"
+                    onClick={handleTransactionTypeChange}
                   >
                     -
                   </button>
@@ -61,16 +100,33 @@ export function ExpenseTracker() {
               </div>
               <div className="amount">
                 <label>Amount $</label>
-                <input type="text" placeholder="80.00" />
+                <input
+                  type="text"
+                  placeholder="80.00"
+                  name="amount"
+                  value={data.amount}
+                  onChange={handleInputChange}
+                />
               </div>
 
               <div className="location">
                 <label>Spending Location: </label>
-                <input type="text" placeholder="Key Food" />
+                <input
+                  type="text"
+                  placeholder="Key Food"
+                  name="location"
+                  value={data.location}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="category">
                 <label>Category: </label>
-                <select className="category-select">
+                <select
+                  className="category-select"
+                  name="category"
+                  value={data.category}
+                  onChange={handleInputChange}
+                >
                   <option value={transactionCategories.bills}>
                     {transactionCategories.bills}
                   </option>
@@ -114,12 +170,15 @@ export function ExpenseTracker() {
               </div>
               <div className="notes">
                 <label>Additional Notes: </label>
-                <textarea placeholder="Making a special occasion dinner.." />
+                <textarea
+                  placeholder="Making a special occasion dinner.."
+                  onChange={handleInputChange}
+                  name="notes"
+                  value={data.notes}
+                />
               </div>
-              <button className="add-transaction" type="submit">
-                Add Transaction
-              </button>
-            </div>
+              <button className="add-transaction">Add Transaction</button>
+            </form>
           </div>
         )}
       </div>
