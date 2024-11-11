@@ -40,3 +40,44 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  background-color: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 40px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  font-size: 1.4rem;
+  width: 90%;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  height: 50px;
+  text-indent: 10px;
+}
+
+.location {
+  display: flex;
+  gap: 20px;
+}
+
+#label {
+  display: flex;
+  justify-content: start;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+}
