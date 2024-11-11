@@ -28,6 +28,7 @@ nav {
 
 button {
   font-size: 1.3rem;
+  background-color: white;
 }
 
 #profile {
@@ -51,7 +52,7 @@ button {
 }
 
 .card-container {
-  border: 1px solid black;
+  border: 1px solid darkcyan;
   height: 350px;
   width: 300px;
   border-radius: 20px;
@@ -67,7 +68,7 @@ button {
 }
 
 .item-info {
-  background-color: black;
+  background-color: darkcyan;
   color: white;
   height: 10%;
   padding: 10px;
