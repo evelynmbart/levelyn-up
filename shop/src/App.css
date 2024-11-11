@@ -1,3 +1,7 @@
+html {
+  background-color: white;
+}
+
 nav {
   background-color: darkcyan;
   color: white;
@@ -37,4 +41,37 @@ button {
   border-radius: 20px;
   padding: 5px 15px;
   color: darkcyan;
+}
+
+.store-container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-container {
+  border: 1px solid black;
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#item-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-info {
+  background-color: black;
+  color: white;
+  height: 10%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
 }
