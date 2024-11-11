@@ -1,0 +1,40 @@
+nav {
+  background-color: darkcyan;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.links {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 30px;
+}
+
+.cart {
+  display: flex;
+  gap: 30px;
+}
+
+button {
+  font-size: 1.3rem;
+}
+
+#profile {
+  background-color: darkcyan;
+  color: white;
+  border: none;
+}
+
+#cart {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: darkcyan;
+}
