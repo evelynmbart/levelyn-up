@@ -22,7 +22,7 @@ function App() {
       if (localStorage.getItem(localKey)) {
         const apiData = JSON.parse(localStorage.getItem(localKey));
         setData(apiData);
-        console.log("fetched from cache today");
+        console.log(apiData);
         return;
       }
       localStorage.clear();
